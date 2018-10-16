@@ -24,19 +24,19 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
+const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 552548348;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 111;
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW         = 10;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x114ef5ff;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW         = 60;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
 
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(10000000000000000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(10394779475270656);
 const uint64_t TAIL_EMISSION_REWARD                          = 1000000000000;
 const size_t CRYPTONOTE_COIN_VERSION                          = 1;
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                 = 0;
@@ -55,11 +55,11 @@ const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 100000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 12;
-const uint64_t MINIMUM_FEE                                   = UINT64_C(100000000);
-const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(100000000);
+const uint64_t MINIMUM_FEE                                   = UINT64_C(500000000);
+const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(500000000);
 
-const uint64_t DIFFICULTY_TARGET                             = 240; // seconds
-const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 360;
+const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
+const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 const size_t   DIFFICULTY_WINDOW                                = 17;
 const size_t   DIFFICULTY_WINDOW_V1                          = 360;
 const size_t   DIFFICULTY_WINDOW_V2                          = 17;
@@ -104,7 +104,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "karbowanec";
+const char     CRYPTONOTE_NAME[]                             = "JokerCMS";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -139,11 +139,9 @@ const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
 const char* const SEED_NODES[] = { 
-  "seed1.karbowanec.com:32347",
-  "seed2.karbowanec.com:32347",
-  "95.46.98.64:32347",
-  "52.21.253.162:32347",
-  "46.149.182.151:32347"
+  
+  "206.189.249.254:18584",
+  "206.189.249.255:18584",
 };
 
 struct CheckpointData {
