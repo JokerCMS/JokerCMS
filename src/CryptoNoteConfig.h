@@ -28,7 +28,7 @@ const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 552548348;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x114ef5ff;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x2c0cef5ff;
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW         = 60;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
@@ -97,11 +97,11 @@ const uint32_t UPGRADE_WINDOW                                = EXPECTED_NUMBER_O
 static_assert(0 < UPGRADE_VOTING_THRESHOLD && UPGRADE_VOTING_THRESHOLD <= 100, "Bad UPGRADE_VOTING_THRESHOLD");
 static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 
-const char     CRYPTONOTE_BLOCKS_FILENAME[]                  = "blocks.bin";
-const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "blockindexes.bin";
-const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.bin";
-const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
-const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
+const char     CRYPTONOTE_BLOCKS_FILENAME[]                  = "jokercms.blocks.bin";
+const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "jokercms.blockindexes.bin";
+const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "jokercms.poolstate.bin";
+const char     P2P_NET_DATA_FILENAME[]                       = "jokercms.p2pstate.bin";
+const char     MINER_CONFIG_FILE_NAME[]                      = "jokercms.miner_conf.json";
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "JokerCMS";
@@ -149,17 +149,8 @@ struct CheckpointData {
   const char* blockId;
 };
 
-const std::initializer_list<CheckpointData> CHECKPOINTS = { {3436, "fa0348c379f63af68304f9f256ea99cc8560eda5a25740dc7ff94631fc7fcf5d"}
-, {16970, "456e43e923a02516559d89f567c3fa2068051a9fdac562a937eeaaaf3e9aab46"}
-, {17290, "90770c1b1397c43bdc7a0c27908994ecf5c2c292ae427ab3deeab099b0b1b37a"}
-, {30000, "4d9762f83ebebb462f1787862aa001e954dadafd203d2fdb973e4b2e52891cf4"}
-, {50000, "4616b7bad31127ce6fefc9b70f346c61507f8e74d29a8cfe0bdd7d047ba33ca2"}
-, {58500, "a09deaf47c1376c091ed41ba7a17951bcc5e8278133e068f13eec412026a00e5"}
-, {63000, "cdd9de8df32cf172a64fa9165af86cfde3d654172f5056f503137d1d8559b286"}
-, {106700, "678abbf293d1dae9eac831d5fc877a4f53bc98bb86c37e2e5c139af936fb2e1e"}
-, {113000, "433abae8244195c85216bb4f72d082bb1c61f5045987b5060b309258e1db625a"}
-, {134800, "8d6ffa48c5fd41cbbae6dfb732073d4f73c10f04b3c253b302f7d67cf1559896"}
- };
+const std::initializer_list<CheckpointData> CHECKPOINTS = { 
+  };
 
 } // CryptoNote
 
